@@ -1,3 +1,5 @@
+LEMAIRE Nathanaël
+
 # Test It - Application de Gestion de Tâches
 
 Application Spring Boot simple pour l'apprentissage des tests unitaires via une API REST de gestion de tâches.
