@@ -13,7 +13,7 @@
             <column name="title" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
-            <column name="description" type="text"/>
+            <column name="description" type="varchar(255)"/>
             <column name="status" type="varchar(20)">
                 <constraints nullable="false"/>
             </column>
