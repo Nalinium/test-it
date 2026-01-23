@@ -10,6 +10,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
+
 @SpringBootTest
 public class TaskServiceTestIT {
 
@@ -42,5 +44,18 @@ public class TaskServiceTestIT {
         taskService.startTask(task.getId(), user.getId());
 
         Assertions.assertThat(task.getStatus()).isEqualTo(Status.EN_COURS);
+    }
+
+    @Test
+    public void test2(){
+        Task task = new Task();
+
+        task.setId(1L);
+        task.setTitle("Task1");
+
+        taskRepository.save(task);
+        taskService.deleteTask(task.getId());
+
+        Assertions.assertThat(taskRepository.findAll()).isEqualTo(List.of());
     }
 }
