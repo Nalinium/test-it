@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.testit.TaskRepositoryTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-02-16T10:17:24.857Z" hostname="ASOUX" time="0.188">
+<testsuite name="com.example.testit.TaskRepositoryTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-02-16T10:41:42.173Z" hostname="ASOUX" time="0.176">
   <properties/>
-  <testcase name="save_shouldPersistTask()" classname="com.example.testit.TaskRepositoryTest" time="0.049"/>
-  <testcase name="findByAssignedUserId_shouldReturnUserTasks()" classname="com.example.testit.TaskRepositoryTest" time="0.037"/>
-  <testcase name="findByUserAndStatus_shouldReturnMatchingTasks()" classname="com.example.testit.TaskRepositoryTest" time="0.05"/>
-  <testcase name="findByUserAndStatus_shouldReturnEmpty_whenNoMatch()" classname="com.example.testit.TaskRepositoryTest" time="0.015"/>
-  <testcase name="findById_shouldReturnTask_whenExists()" classname="com.example.testit.TaskRepositoryTest" time="0.014"/>
-  <testcase name="findAll_shouldReturnAllTasks()" classname="com.example.testit.TaskRepositoryTest" time="0.014"/>
-  <system-out><![CDATA[2026-02-16T11:17:24.377+01:00  INFO 33227 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.testit.TaskRepositoryTest]: TaskRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-02-16T11:17:24.387+01:00  INFO 33227 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.testit.TestItApplication for test class com.example.testit.TaskRepositoryTest
+  <testcase name="save_shouldPersistTask()" classname="com.example.testit.TaskRepositoryTest" time="0.061"/>
+  <testcase name="findByAssignedUserId_shouldReturnUserTasks()" classname="com.example.testit.TaskRepositoryTest" time="0.026"/>
+  <testcase name="findByUserAndStatus_shouldReturnMatchingTasks()" classname="com.example.testit.TaskRepositoryTest" time="0.034"/>
+  <testcase name="findByUserAndStatus_shouldReturnEmpty_whenNoMatch()" classname="com.example.testit.TaskRepositoryTest" time="0.014"/>
+  <testcase name="findById_shouldReturnTask_whenExists()" classname="com.example.testit.TaskRepositoryTest" time="0.017"/>
+  <testcase name="findAll_shouldReturnAllTasks()" classname="com.example.testit.TaskRepositoryTest" time="0.016"/>
+  <system-out><![CDATA[2026-02-16T11:41:41.764+01:00  INFO 35352 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.testit.TaskRepositoryTest]: TaskRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-02-16T11:41:41.772+01:00  INFO 35352 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.testit.TestItApplication for test class com.example.testit.TaskRepositoryTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -18,43 +18,43 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.0)
 
-2026-02-16T11:17:24.416+01:00  INFO 33227 --- [    Test worker] com.example.testit.TaskRepositoryTest    : Starting TaskRepositoryTest using Java 21 with PID 33227 (started by luth3r in /home/luth3r/Documents/Polytech/5A IA2R/SIR/Fullstack/TP2 Security/test-it)
-2026-02-16T11:17:24.416+01:00  INFO 33227 --- [    Test worker] com.example.testit.TaskRepositoryTest    : No active profile set, falling back to 1 default profile: "default"
-2026-02-16T11:17:24.493+01:00  INFO 33227 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-16T11:17:24.503+01:00  INFO 33227 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 2 JPA repository interfaces.
-2026-02-16T11:17:24.522+01:00  INFO 33227 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
-2026-02-16T11:17:24.552+01:00  INFO 33227 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:e2efbb0e-c7b8-4682-ad7b-dc83edc5820f;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2026-02-16T11:17:24.573+01:00  INFO 33227 --- [    Test worker] liquibase.database                       : Set default schema name to PUBLIC
-2026-02-16T11:17:24.656+01:00  INFO 33227 --- [    Test worker] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
-2026-02-16T11:17:24.661+01:00  INFO 33227 --- [    Test worker] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
-2026-02-16T11:17:24.684+01:00  INFO 33227 --- [    Test worker] liquibase.lockservice                    : Successfully acquired change log lock
-2026-02-16T11:17:24.685+01:00  INFO 33227 --- [    Test worker] liquibase.command                        : Using deploymentId: 1237044684
-2026-02-16T11:17:24.686+01:00  INFO 33227 --- [    Test worker] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2026-02-16T11:41:41.789+01:00  INFO 35352 --- [    Test worker] com.example.testit.TaskRepositoryTest    : Starting TaskRepositoryTest using Java 21 with PID 35352 (started by luth3r in /home/luth3r/Documents/Polytech/5A IA2R/SIR/Fullstack/TP2 Security/test-it)
+2026-02-16T11:41:41.790+01:00  INFO 35352 --- [    Test worker] com.example.testit.TaskRepositoryTest    : No active profile set, falling back to 1 default profile: "default"
+2026-02-16T11:41:41.848+01:00  INFO 35352 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-16T11:41:41.857+01:00  INFO 35352 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 2 JPA repository interfaces.
+2026-02-16T11:41:41.872+01:00  INFO 35352 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2026-02-16T11:41:41.896+01:00  INFO 35352 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:8082170c-abd4-4d55-a201-1188cc3cba48;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2026-02-16T11:41:41.904+01:00  INFO 35352 --- [    Test worker] liquibase.database                       : Set default schema name to PUBLIC
+2026-02-16T11:41:41.965+01:00  INFO 35352 --- [    Test worker] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2026-02-16T11:41:41.969+01:00  INFO 35352 --- [    Test worker] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2026-02-16T11:41:41.997+01:00  INFO 35352 --- [    Test worker] liquibase.lockservice                    : Successfully acquired change log lock
+2026-02-16T11:41:41.998+01:00  INFO 35352 --- [    Test worker] liquibase.command                        : Using deploymentId: 1238501998
+2026-02-16T11:41:42.000+01:00  INFO 35352 --- [    Test worker] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
 Running Changeset: db/changelog/001-create-users-table.xml::001::testit
-2026-02-16T11:17:24.700+01:00  INFO 33227 --- [    Test worker] liquibase.changelog                      : Table users created
-2026-02-16T11:17:24.701+01:00  INFO 33227 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/001-create-users-table.xml::001::testit ran successfully in 4ms
+2026-02-16T11:41:42.019+01:00  INFO 35352 --- [    Test worker] liquibase.changelog                      : Table users created
+2026-02-16T11:41:42.020+01:00  INFO 35352 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/001-create-users-table.xml::001::testit ran successfully in 5ms
 Running Changeset: db/changelog/002-create-task-table.xml::002::testit
-2026-02-16T11:17:24.713+01:00  INFO 33227 --- [    Test worker] liquibase.changelog                      : Table task created
-2026-02-16T11:17:24.714+01:00  INFO 33227 --- [    Test worker] liquibase.changelog                      : Sequence task_seq created
-2026-02-16T11:17:24.715+01:00  INFO 33227 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/002-create-task-table.xml::002::testit ran successfully in 6ms
-2026-02-16T11:17:24.718+01:00  INFO 33227 --- [    Test worker] liquibase.util                           : UPDATE SUMMARY
-2026-02-16T11:17:24.718+01:00  INFO 33227 --- [    Test worker] liquibase.util                           : Run:                          2
-2026-02-16T11:17:24.719+01:00  INFO 33227 --- [    Test worker] liquibase.util                           : Previously run:               0
-2026-02-16T11:17:24.719+01:00  INFO 33227 --- [    Test worker] liquibase.util                           : Filtered out:                 0
-2026-02-16T11:17:24.719+01:00  INFO 33227 --- [    Test worker] liquibase.util                           : -------------------------------
-2026-02-16T11:17:24.719+01:00  INFO 33227 --- [    Test worker] liquibase.util                           : Total change sets:            2
-2026-02-16T11:17:24.719+01:00  INFO 33227 --- [    Test worker] liquibase.util                           : Update summary generated
-2026-02-16T11:17:24.720+01:00  INFO 33227 --- [    Test worker] liquibase.command                        : Update command completed successfully.
+2026-02-16T11:41:42.031+01:00  INFO 35352 --- [    Test worker] liquibase.changelog                      : Table task created
+2026-02-16T11:41:42.032+01:00  INFO 35352 --- [    Test worker] liquibase.changelog                      : Sequence task_seq created
+2026-02-16T11:41:42.032+01:00  INFO 35352 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/002-create-task-table.xml::002::testit ran successfully in 5ms
+2026-02-16T11:41:42.035+01:00  INFO 35352 --- [    Test worker] liquibase.util                           : UPDATE SUMMARY
+2026-02-16T11:41:42.035+01:00  INFO 35352 --- [    Test worker] liquibase.util                           : Run:                          2
+2026-02-16T11:41:42.035+01:00  INFO 35352 --- [    Test worker] liquibase.util                           : Previously run:               0
+2026-02-16T11:41:42.035+01:00  INFO 35352 --- [    Test worker] liquibase.util                           : Filtered out:                 0
+2026-02-16T11:41:42.035+01:00  INFO 35352 --- [    Test worker] liquibase.util                           : -------------------------------
+2026-02-16T11:41:42.035+01:00  INFO 35352 --- [    Test worker] liquibase.util                           : Total change sets:            2
+2026-02-16T11:41:42.035+01:00  INFO 35352 --- [    Test worker] liquibase.util                           : Update summary generated
+2026-02-16T11:41:42.036+01:00  INFO 35352 --- [    Test worker] liquibase.command                        : Update command completed successfully.
 Liquibase: Update has been successful. Rows affected: 2
-2026-02-16T11:17:24.722+01:00  INFO 33227 --- [    Test worker] liquibase.lockservice                    : Successfully released change log lock
-2026-02-16T11:17:24.723+01:00  INFO 33227 --- [    Test worker] liquibase.command                        : Command execution complete
-2026-02-16T11:17:24.745+01:00  INFO 33227 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-16T11:17:24.747+01:00  INFO 33227 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-02-16T11:17:24.750+01:00  INFO 33227 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-16T11:17:24.752+01:00  WARN 33227 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-16T11:17:24.789+01:00  INFO 33227 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-16T11:17:24.792+01:00  INFO 33227 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-16T11:17:24.855+01:00  INFO 33227 --- [    Test worker] com.example.testit.TaskRepositoryTest    : Started TaskRepositoryTest in 0.465 seconds (process running for 6.455)
+2026-02-16T11:41:42.038+01:00  INFO 35352 --- [    Test worker] liquibase.lockservice                    : Successfully released change log lock
+2026-02-16T11:41:42.038+01:00  INFO 35352 --- [    Test worker] liquibase.command                        : Command execution complete
+2026-02-16T11:41:42.055+01:00  INFO 35352 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16T11:41:42.057+01:00  INFO 35352 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-16T11:41:42.059+01:00  INFO 35352 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-16T11:41:42.061+01:00  WARN 35352 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16T11:41:42.106+01:00  INFO 35352 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16T11:41:42.110+01:00  INFO 35352 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-16T11:41:42.170+01:00  INFO 35352 --- [    Test worker] com.example.testit.TaskRepositoryTest    : Started TaskRepositoryTest in 0.396 seconds (process running for 7.227)
 Hibernate: insert into users (manager_id,password,username,id) values (?,?,?,default)
 Hibernate: insert into users (manager_id,password,username,id) values (?,?,?,default)
 Hibernate: insert into task (assigned_user_id,description,requester_id,status,title,id) values (?,?,?,?,?,default)

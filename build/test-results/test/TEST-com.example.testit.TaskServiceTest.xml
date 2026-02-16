@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.testit.TaskServiceTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-02-16T10:17:25.905Z" hostname="ASOUX" time="0.502">
+<testsuite name="com.example.testit.TaskServiceTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-02-16T10:41:43.252Z" hostname="ASOUX" time="0.615">
   <properties/>
-  <testcase name="startTask_shouldThrow_whenTaskNotOuvert()" classname="com.example.testit.TaskServiceTest" time="0.446"/>
-  <testcase name="startTask_shouldStartTask_whenValid()" classname="com.example.testit.TaskServiceTest" time="0.012"/>
-  <testcase name="createTask_shouldCreateTask()" classname="com.example.testit.TaskServiceTest" time="0.008"/>
-  <testcase name="startTask_shouldThrow_whenUserHasOngoingTask()" classname="com.example.testit.TaskServiceTest" time="0.009"/>
-  <testcase name="finishTask_shouldThrow_whenTaskNotEnCours()" classname="com.example.testit.TaskServiceTest" time="0.005"/>
-  <testcase name="finishTask_shouldFinishTask_whenValid()" classname="com.example.testit.TaskServiceTest" time="0.004"/>
+  <testcase name="startTask_shouldThrow_whenTaskNotOuvert()" classname="com.example.testit.TaskServiceTest" time="0.54"/>
+  <testcase name="startTask_shouldStartTask_whenValid()" classname="com.example.testit.TaskServiceTest" time="0.014"/>
+  <testcase name="createTask_shouldCreateTask()" classname="com.example.testit.TaskServiceTest" time="0.011"/>
+  <testcase name="startTask_shouldThrow_whenUserHasOngoingTask()" classname="com.example.testit.TaskServiceTest" time="0.011"/>
+  <testcase name="finishTask_shouldThrow_whenTaskNotEnCours()" classname="com.example.testit.TaskServiceTest" time="0.008"/>
+  <testcase name="finishTask_shouldFinishTask_whenValid()" classname="com.example.testit.TaskServiceTest" time="0.009"/>
   <testcase name="startTask_shouldThrow_whenTaskNotAssigned()" classname="com.example.testit.TaskServiceTest" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

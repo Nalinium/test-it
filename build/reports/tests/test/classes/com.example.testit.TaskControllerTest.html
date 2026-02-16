@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.196s</div>
+<div class="counter">1.169s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">66%</div>
 <p>successful</p>
 </div>
 </td>
@@ -60,6 +60,9 @@
 </div>
 <div class="tab-container">
 <ul class="tabLinks">
+<li>
+<a href="#">Failed tests</a>
+</li>
 <li>
 <a href="#">Tests</a>
 </li>
@@ -71,6 +74,102 @@
 </li>
 </ul>
 <div class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="createTask_shouldCreateTask()"></a>
+<h3 class="failures">createTask_shouldCreateTask()</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Status expected:&lt;200&gt; but was:&lt;403&gt;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.testit.TaskControllerTest.createTask_shouldCreateTask(TaskControllerTest.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -81,18 +180,18 @@
 </tr>
 </thead>
 <tr>
-<td class="success">createTask_shouldCreateTask()</td>
-<td class="success">0.919s</td>
-<td class="success">passed</td>
+<td class="failures">createTask_shouldCreateTask()</td>
+<td class="failures">0.810s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">getAllTasks_shouldReturnEmptyList_initially()</td>
-<td class="success">0.137s</td>
+<td class="success">0.138s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getTasksByUser_shouldReturnUserTasks()</td>
-<td class="success">0.140s</td>
+<td class="success">0.221s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -100,8 +199,8 @@
 <div class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>11:17:19.146 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.testit.TaskControllerTest]: TaskControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-11:17:19.228 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.testit.TestItApplication for test class com.example.testit.TaskControllerTest
+<pre>11:41:35.704 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.testit.TaskControllerTest]: TaskControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:41:35.794 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.testit.TestItApplication for test class com.example.testit.TaskControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -111,71 +210,117 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.0)
 
-2026-02-16T11:17:19.511+01:00  INFO 33227 --- [    Test worker] com.example.testit.TaskControllerTest    : Starting TaskControllerTest using Java 21 with PID 33227 (started by luth3r in /home/luth3r/Documents/Polytech/5A IA2R/SIR/Fullstack/TP2 Security/test-it)
-2026-02-16T11:17:19.513+01:00  INFO 33227 --- [    Test worker] com.example.testit.TaskControllerTest    : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2026-02-16T11:17:20.029+01:00  INFO 33227 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-16T11:17:20.073+01:00  INFO 33227 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 2 JPA repository interfaces.
-2026-02-16T11:17:20.441+01:00  INFO 33227 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-02-16T11:17:20.572+01:00  INFO 33227 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2026-02-16T11:17:20.575+01:00  INFO 33227 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-02-16T11:17:20.622+01:00  INFO 33227 --- [    Test worker] liquibase.database                       : Set default schema name to PUBLIC
-2026-02-16T11:17:21.012+01:00  INFO 33227 --- [    Test worker] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
-2026-02-16T11:17:21.082+01:00  INFO 33227 --- [    Test worker] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
-2026-02-16T11:17:21.164+01:00  INFO 33227 --- [    Test worker] liquibase.lockservice                    : Successfully acquired change log lock
-2026-02-16T11:17:21.166+01:00  INFO 33227 --- [    Test worker] liquibase.command                        : Using deploymentId: 1237041165
-2026-02-16T11:17:21.167+01:00  INFO 33227 --- [    Test worker] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2026-02-16T11:41:36.125+01:00  INFO 35352 --- [    Test worker] com.example.testit.TaskControllerTest    : Starting TaskControllerTest using Java 21 with PID 35352 (started by luth3r in /home/luth3r/Documents/Polytech/5A IA2R/SIR/Fullstack/TP2 Security/test-it)
+2026-02-16T11:41:36.127+01:00  INFO 35352 --- [    Test worker] com.example.testit.TaskControllerTest    : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2026-02-16T11:41:36.753+01:00  INFO 35352 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-16T11:41:36.800+01:00  INFO 35352 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+2026-02-16T11:41:37.200+01:00  INFO 35352 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-16T11:41:37.360+01:00  INFO 35352 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-02-16T11:41:37.361+01:00  INFO 35352 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-16T11:41:37.423+01:00  INFO 35352 --- [    Test worker] liquibase.database                       : Set default schema name to PUBLIC
+2026-02-16T11:41:37.919+01:00  INFO 35352 --- [    Test worker] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2026-02-16T11:41:38.012+01:00  INFO 35352 --- [    Test worker] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2026-02-16T11:41:38.106+01:00  INFO 35352 --- [    Test worker] liquibase.lockservice                    : Successfully acquired change log lock
+2026-02-16T11:41:38.108+01:00  INFO 35352 --- [    Test worker] liquibase.command                        : Using deploymentId: 1238498107
+2026-02-16T11:41:38.109+01:00  INFO 35352 --- [    Test worker] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
 Running Changeset: db/changelog/001-create-users-table.xml::001::testit
-2026-02-16T11:17:21.208+01:00  INFO 33227 --- [    Test worker] liquibase.changelog                      : Table users created
-2026-02-16T11:17:21.210+01:00  INFO 33227 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/001-create-users-table.xml::001::testit ran successfully in 15ms
+2026-02-16T11:41:38.153+01:00  INFO 35352 --- [    Test worker] liquibase.changelog                      : Table users created
+2026-02-16T11:41:38.154+01:00  INFO 35352 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/001-create-users-table.xml::001::testit ran successfully in 11ms
 Running Changeset: db/changelog/002-create-task-table.xml::002::testit
-2026-02-16T11:17:21.232+01:00  INFO 33227 --- [    Test worker] liquibase.changelog                      : Table task created
-2026-02-16T11:17:21.233+01:00  INFO 33227 --- [    Test worker] liquibase.changelog                      : Sequence task_seq created
-2026-02-16T11:17:21.234+01:00  INFO 33227 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/002-create-task-table.xml::002::testit ran successfully in 5ms
-2026-02-16T11:17:21.242+01:00  INFO 33227 --- [    Test worker] liquibase.util                           : UPDATE SUMMARY
-2026-02-16T11:17:21.242+01:00  INFO 33227 --- [    Test worker] liquibase.util                           : Run:                          2
-2026-02-16T11:17:21.242+01:00  INFO 33227 --- [    Test worker] liquibase.util                           : Previously run:               0
-2026-02-16T11:17:21.242+01:00  INFO 33227 --- [    Test worker] liquibase.util                           : Filtered out:                 0
-2026-02-16T11:17:21.243+01:00  INFO 33227 --- [    Test worker] liquibase.util                           : -------------------------------
-2026-02-16T11:17:21.243+01:00  INFO 33227 --- [    Test worker] liquibase.util                           : Total change sets:            2
-2026-02-16T11:17:21.243+01:00  INFO 33227 --- [    Test worker] liquibase.util                           : Update summary generated
-2026-02-16T11:17:21.245+01:00  INFO 33227 --- [    Test worker] liquibase.command                        : Update command completed successfully.
+2026-02-16T11:41:38.169+01:00  INFO 35352 --- [    Test worker] liquibase.changelog                      : Table task created
+2026-02-16T11:41:38.171+01:00  INFO 35352 --- [    Test worker] liquibase.changelog                      : Sequence task_seq created
+2026-02-16T11:41:38.172+01:00  INFO 35352 --- [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/002-create-task-table.xml::002::testit ran successfully in 7ms
+2026-02-16T11:41:38.180+01:00  INFO 35352 --- [    Test worker] liquibase.util                           : UPDATE SUMMARY
+2026-02-16T11:41:38.180+01:00  INFO 35352 --- [    Test worker] liquibase.util                           : Run:                          2
+2026-02-16T11:41:38.181+01:00  INFO 35352 --- [    Test worker] liquibase.util                           : Previously run:               0
+2026-02-16T11:41:38.181+01:00  INFO 35352 --- [    Test worker] liquibase.util                           : Filtered out:                 0
+2026-02-16T11:41:38.181+01:00  INFO 35352 --- [    Test worker] liquibase.util                           : -------------------------------
+2026-02-16T11:41:38.182+01:00  INFO 35352 --- [    Test worker] liquibase.util                           : Total change sets:            2
+2026-02-16T11:41:38.182+01:00  INFO 35352 --- [    Test worker] liquibase.util                           : Update summary generated
+2026-02-16T11:41:38.184+01:00  INFO 35352 --- [    Test worker] liquibase.command                        : Update command completed successfully.
 Liquibase: Update has been successful. Rows affected: 2
-2026-02-16T11:17:21.247+01:00  INFO 33227 --- [    Test worker] liquibase.lockservice                    : Successfully released change log lock
-2026-02-16T11:17:21.248+01:00  INFO 33227 --- [    Test worker] liquibase.command                        : Command execution complete
-2026-02-16T11:17:21.309+01:00  INFO 33227 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-02-16T11:17:21.342+01:00  INFO 33227 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
-2026-02-16T11:17:21.368+01:00  INFO 33227 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-02-16T11:17:21.517+01:00  INFO 33227 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-16T11:17:21.544+01:00  WARN 33227 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-02-16T11:17:21.992+01:00  INFO 33227 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-16T11:17:22.009+01:00  INFO 33227 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-16T11:17:22.215+01:00  INFO 33227 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-16T11:17:22.606+01:00  WARN 33227 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-16T11:17:22.872+01:00  INFO 33227 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@746fda68, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77cac3b, org.springframework.security.web.context.SecurityContextHolderFilter@5af535ff, org.springframework.security.web.header.HeaderWriterFilter@73e054c0, org.springframework.web.filter.CorsFilter@3167c0d, org.springframework.security.web.authentication.logout.LogoutFilter@41861964, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@46a6b8d6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@60c3f653, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7075ef91, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74f23ecc, org.springframework.security.web.session.SessionManagementFilter@3c9e06d7, org.springframework.security.web.access.ExceptionTranslationFilter@21f4f5d4, org.springframework.security.web.access.intercept.AuthorizationFilter@2cf88ae1]
-2026-02-16T11:17:23.059+01:00  INFO 33227 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2026-02-16T11:17:23.132+01:00  INFO 33227 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-02-16T11:17:23.133+01:00  INFO 33227 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-02-16T11:17:23.134+01:00  INFO 33227 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2026-02-16T11:17:23.154+01:00  INFO 33227 --- [    Test worker] com.example.testit.TaskControllerTest    : Started TaskControllerTest in 3.822 seconds (process running for 4.754)
-2026-02-16T11:17:23.763+01:00 DEBUG 33227 --- [    Test worker] o.s.security.web.FilterChainProxy        : Securing POST /tasks
-2026-02-16T11:17:23.768+01:00  WARN 33227 --- [    Test worker] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/tasks' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
-2026-02-16T11:17:23.834+01:00  INFO 33227 --- [    Test worker] c.e.testit.service.MyUserDetailService   : Load user by username: testuser
-2026-02-16T11:17:23.888+01:00  INFO 33227 --- [    Test worker] c.e.testit.service.MyUserDetailService   : User found: testuser
-2026-02-16T11:17:23.950+01:00 DEBUG 33227 --- [    Test worker] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
-2026-02-16T11:17:23.951+01:00 DEBUG 33227 --- [    Test worker] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.example.testit.security.MyUserPrincipal@26a8eaaa, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[]]
-2026-02-16T11:17:23.952+01:00 DEBUG 33227 --- [    Test worker] o.s.security.web.FilterChainProxy        : Secured POST /tasks
-2026-02-16T11:17:24.159+01:00 DEBUG 33227 --- [    Test worker] o.s.security.web.FilterChainProxy        : Securing GET /tasks/user/2
-2026-02-16T11:17:24.160+01:00  INFO 33227 --- [    Test worker] c.e.testit.service.MyUserDetailService   : Load user by username: testuser
-2026-02-16T11:17:24.162+01:00  INFO 33227 --- [    Test worker] c.e.testit.service.MyUserDetailService   : User found: testuser
-2026-02-16T11:17:24.221+01:00 DEBUG 33227 --- [    Test worker] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
-2026-02-16T11:17:24.221+01:00 DEBUG 33227 --- [    Test worker] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.example.testit.security.MyUserPrincipal@57e9dd1f, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[]]
-2026-02-16T11:17:24.221+01:00 DEBUG 33227 --- [    Test worker] o.s.security.web.FilterChainProxy        : Secured GET /tasks/user/2
-2026-02-16T11:17:24.298+01:00 DEBUG 33227 --- [    Test worker] o.s.security.web.FilterChainProxy        : Securing GET /tasks
-2026-02-16T11:17:24.298+01:00  INFO 33227 --- [    Test worker] c.e.testit.service.MyUserDetailService   : Load user by username: testuser
-2026-02-16T11:17:24.301+01:00  INFO 33227 --- [    Test worker] c.e.testit.service.MyUserDetailService   : User found: testuser
-2026-02-16T11:17:24.359+01:00 DEBUG 33227 --- [    Test worker] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
-2026-02-16T11:17:24.359+01:00 DEBUG 33227 --- [    Test worker] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.example.testit.security.MyUserPrincipal@3d6fe206, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[]]
-2026-02-16T11:17:24.360+01:00 DEBUG 33227 --- [    Test worker] o.s.security.web.FilterChainProxy        : Secured GET /tasks
+2026-02-16T11:41:38.187+01:00  INFO 35352 --- [    Test worker] liquibase.lockservice                    : Successfully released change log lock
+2026-02-16T11:41:38.187+01:00  INFO 35352 --- [    Test worker] liquibase.command                        : Command execution complete
+2026-02-16T11:41:38.298+01:00  INFO 35352 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16T11:41:38.342+01:00  INFO 35352 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-02-16T11:41:38.374+01:00  INFO 35352 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-16T11:41:38.545+01:00  INFO 35352 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-16T11:41:38.570+01:00  WARN 35352 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16T11:41:39.116+01:00  INFO 35352 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16T11:41:39.134+01:00  INFO 35352 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-16T11:41:39.379+01:00  INFO 35352 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-02-16T11:41:39.810+01:00 DEBUG 35352 --- [    Test worker] o.s.s.a.h.RoleHierarchyImpl              : setHierarchy() - The following role hierarchy was set: ROLE_ADMIN &gt; ROLE_MANAGER
+ROLE_MANAGER &gt; ROLE_USER
+2026-02-16T11:41:39.810+01:00 DEBUG 35352 --- [    Test worker] o.s.s.a.h.RoleHierarchyImpl              : buildRolesReachableInOneStepMap() - From role ROLE_ADMIN one can reach role ROLE_MANAGER in one step.
+2026-02-16T11:41:39.810+01:00 DEBUG 35352 --- [    Test worker] o.s.s.a.h.RoleHierarchyImpl              : buildRolesReachableInOneStepMap() - From role ROLE_MANAGER one can reach role ROLE_USER in one step.
+2026-02-16T11:41:39.810+01:00 DEBUG 35352 --- [    Test worker] o.s.s.a.h.RoleHierarchyImpl              : buildRolesReachableInOneOrMoreStepsMap() - From role ROLE_MANAGER one can reach [ROLE_USER] in one or more steps.
+2026-02-16T11:41:39.810+01:00 DEBUG 35352 --- [    Test worker] o.s.s.a.h.RoleHierarchyImpl              : buildRolesReachableInOneOrMoreStepsMap() - From role ROLE_ADMIN one can reach [ROLE_USER, ROLE_MANAGER] in one or more steps.
+2026-02-16T11:41:39.848+01:00  WARN 35352 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-16T11:41:40.170+01:00  INFO 35352 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@12e1413c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41b6ae51, org.springframework.security.web.context.SecurityContextHolderFilter@71390c8, org.springframework.security.web.header.HeaderWriterFilter@4b0a6c53, org.springframework.web.filter.CorsFilter@686a08f4, org.springframework.security.web.authentication.logout.LogoutFilter@10fef3d1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@24a29d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f1bde96, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3776c917, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60b90fd3, org.springframework.security.web.session.SessionManagementFilter@1df1bd44, org.springframework.security.web.access.ExceptionTranslationFilter@431782fe, org.springframework.security.web.access.intercept.AuthorizationFilter@de0922c]
+2026-02-16T11:41:40.386+01:00  INFO 35352 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2026-02-16T11:41:40.523+01:00  INFO 35352 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-02-16T11:41:40.524+01:00  INFO 35352 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-02-16T11:41:40.526+01:00  INFO 35352 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-02-16T11:41:40.565+01:00  INFO 35352 --- [    Test worker] com.example.testit.TaskControllerTest    : Started TaskControllerTest in 4.626 seconds (process running for 5.622)
+2026-02-16T11:41:41.197+01:00 DEBUG 35352 --- [    Test worker] o.s.security.web.FilterChainProxy        : Securing POST /tasks
+2026-02-16T11:41:41.203+01:00  WARN 35352 --- [    Test worker] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/tasks' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-02-16T11:41:41.268+01:00  INFO 35352 --- [    Test worker] c.e.testit.service.MyUserDetailService   : Load user by username: testuser
+2026-02-16T11:41:41.315+01:00  INFO 35352 --- [    Test worker] c.e.testit.service.MyUserDetailService   : User found: testuser
+2026-02-16T11:41:41.373+01:00 DEBUG 35352 --- [    Test worker] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-02-16T11:41:41.374+01:00 DEBUG 35352 --- [    Test worker] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.example.testit.security.MyUserPrincipal@4465d4ce, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[]]
+2026-02-16T11:41:41.376+01:00 DEBUG 35352 --- [    Test worker] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /tasks
+       Parameters = {}
+          Headers = [Content-Type:&quot;application/json;charset=UTF-8&quot;, Authorization:&quot;Basic dGVzdHVzZXI6dGF0YQ==&quot;, Content-Length:&quot;68&quot;]
+             Body = {
+    &quot;title&quot;: &quot;Test Task&quot;,
+    &quot;description&quot;: &quot;Test Description&quot;
+}
+
+    Session Attrs = {}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 403
+    Error message = Forbidden
+          Headers = [Vary:&quot;Origin&quot;, &quot;Access-Control-Request-Method&quot;, &quot;Access-Control-Request-Headers&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;0&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2026-02-16T11:41:41.509+01:00 DEBUG 35352 --- [    Test worker] o.s.security.web.FilterChainProxy        : Securing GET /tasks/user/2
+2026-02-16T11:41:41.510+01:00  INFO 35352 --- [    Test worker] c.e.testit.service.MyUserDetailService   : Load user by username: testuser
+2026-02-16T11:41:41.513+01:00  INFO 35352 --- [    Test worker] c.e.testit.service.MyUserDetailService   : User found: testuser
+2026-02-16T11:41:41.573+01:00 DEBUG 35352 --- [    Test worker] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-02-16T11:41:41.573+01:00 DEBUG 35352 --- [    Test worker] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.example.testit.security.MyUserPrincipal@5cfc283d, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[]]
+2026-02-16T11:41:41.574+01:00 DEBUG 35352 --- [    Test worker] o.s.security.web.FilterChainProxy        : Secured GET /tasks/user/2
+2026-02-16T11:41:41.686+01:00 DEBUG 35352 --- [    Test worker] o.s.security.web.FilterChainProxy        : Securing GET /tasks
+2026-02-16T11:41:41.687+01:00  INFO 35352 --- [    Test worker] c.e.testit.service.MyUserDetailService   : Load user by username: testuser
+2026-02-16T11:41:41.690+01:00  INFO 35352 --- [    Test worker] c.e.testit.service.MyUserDetailService   : User found: testuser
+2026-02-16T11:41:41.747+01:00 DEBUG 35352 --- [    Test worker] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-02-16T11:41:41.747+01:00 DEBUG 35352 --- [    Test worker] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.example.testit.security.MyUserPrincipal@2cb962ed, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[]]
+2026-02-16T11:41:41.747+01:00 DEBUG 35352 --- [    Test worker] o.s.security.web.FilterChainProxy        : Secured GET /tasks
 </pre>
 </span>
 </div>
@@ -197,7 +342,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14</a> at Feb 16, 2026, 11:17:26 AM</p>
+<a href="https://www.gradle.org">Gradle 8.14</a> at Feb 16, 2026, 11:41:44 AM</p>
 </div>
 </div>
 </body>
