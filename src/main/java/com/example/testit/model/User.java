@@ -12,7 +12,7 @@ public class User {
     private Long id;
 
     private String username;
-
+    private String password;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "manager_id")
@@ -34,4 +34,12 @@ public class User {
 
     public User getManager() { return manager; }
     public void setManager(User manager) { this.manager = manager; }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(final String password) {
+        this.password = password;
+    }
 }

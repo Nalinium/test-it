@@ -11,8 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
+import java.util.Base64;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -31,21 +34,29 @@ class TaskControllerTest {
     @Autowired
     private CurrentUserServiceFake currentUserServiceFake;
 
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
     private Long userId;
 
     @BeforeEach
     void setUp() {
         // Créer un utilisateur de test en DB
         User user = new User("testuser");
+        user.setPassword(passwordEncoder.encode("tata"));
+
         userRepository.save(user);
         userId = user.getId();
         // Set current user for auth
         currentUserServiceFake.setCurrent(userId);
     }
 
+    String credentials = "testuser:tata";
+    String base64Credentials = Base64.getEncoder().encodeToString(credentials.getBytes());
+
     @Test
     void getAllTasks_shouldReturnEmptyList_initially() throws Exception {
-        mockMvc.perform(get("/tasks"))
+        mockMvc.perform(get("/tasks").header("Authorization", "Basic " + base64Credentials))
                 .andExpect(status().isOk())
                 .andExpect(content().json("[]"));
     }
@@ -59,7 +70,7 @@ class TaskControllerTest {
             }
             """;
 
-        mockMvc.perform(post("/tasks")
+        mockMvc.perform(post("/tasks").header("Authorization", "Basic " + base64Credentials)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(taskJson))
                 .andExpect(status().isOk())
@@ -69,7 +80,7 @@ class TaskControllerTest {
 
     @Test
     void getTasksByUser_shouldReturnUserTasks() throws Exception {
-        mockMvc.perform(get("/tasks/user/{userId}", userId))
+        mockMvc.perform(get("/tasks/user/{userId}", userId).header("Authorization", "Basic " + base64Credentials))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$").isArray());
     }
